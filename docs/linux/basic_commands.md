@@ -1,3 +1,33 @@
+# Basic Linux proficiency
+
+Fundamental to working with Linux is to understand files on Linux.  How
+they are named, what their properties are, how to change their properties,
+how to create them and destroy them.  Directories are collections of
+filenames and they, too, have properties and can be created and destroyed.
+
+When you first login, you will be in your _home directory_.  All the
+examples below will work from your home directory.  We often say 'in a
+directory' and 'changing to a directory', and we will often talk about
+directories as if they were spatial locations: 'where are you?', 'what
+directory are you in?'  If you manage to get someplace and just want to
+go home, then the following command will take you home (NOTE: The `$` is
+meant to indicate the prompt; it is not to be typed).
+
+```
+$ cd
+```
+on your machine, there will often be text that comes before the `$`, for
+example, you might see
+```
+[username@machine_name ~]$
+```
+or
+
+```
+username@machine_name:~$
+```
+and there may be colored text or not.  The `$` marks the end of the prompt.
+
 ## File and directory names
 
 You can name files and directories almost anything on a Linux machine,
@@ -223,7 +253,8 @@ create all the necessary intermediate paths.
 
 _Examples_
 
-```$ mkdir /tmp/test
+```
+$ mkdir /tmp/test
 $ mkdir /tmp/test/test2
 $ mkdir -p /tmp/test2/subtest
 ```
@@ -317,7 +348,7 @@ psych808.
 The chmod command takes the following general form
 
 ```
-$ chmod &lt;options&gt; &lt;targets&gt;{+|-}&lt;permissions&gt;
+$ chmod <options> <targets>{+|-}<permissions>
 ```
 
 
@@ -325,7 +356,7 @@ Options are the usual options beginning with a dash. The targets are one or
 more of u, g, or o. A plus sign is used to indicate that the permission that
 follow should be present (added) or absent (subtracted). The permissions are
 one of r, w, x, X, or s. If you want to apply different permissions to
-different targets, separate the `&lt;targets&gt;{+|-}&lt;permissions&gt;`
+different targets, separate the `<targets>{+|-}<permissions>`
 with a comma.
 
 The examples below will help clarify how this works. The first example will
