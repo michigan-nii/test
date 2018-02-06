@@ -93,7 +93,7 @@ $ ls -l README
 ```
 
 
-The first `-` simply indicates that this is an ordinary file. The next three
+The first dash (`-`) indicates that this is an ordinary file. The next three
 characters, `rw-` indicate that the owner of the file, a user named
 `grundoon`, can read and write the file, and that it should not be
 considered an executable (runnable) program. The second set is the same as
