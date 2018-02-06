@@ -5,8 +5,8 @@ however, we recommend that you limit yourself to using a restricted set of
 characters, and that you establish some conventions. The recommended set of
 characters is
 
-* letters, both upper- and lower-case</li>
-* numerals</li>
+* letters, both upper- and lower-case
+* numerals
 * the dash (`-`), the underscore (`_`), and the dot (`.`)
 
 
@@ -57,7 +57,8 @@ permissions are the first listed group of characters, `-rw-rw-r--.`. In the
 following example, we use the `ls` command to list files; more information
 on the `ls` command is below in the section on commands.
 
-```$ ls -l README 
+```
+$ ls -l README 
 -rw-rw-r--. 1 grundoon users 0 Sep 24 12:08 README
 ```
 
@@ -85,7 +86,8 @@ that line and start the right program to run the script.
 An example will help clarify this. Suppose we have a file called `hello.sh`
 that contains the following lines
 
-```#!/bin/bash
+```
+#!/bin/bash
 echo "Hello, there."
 echo "I just printed something for you."
 ```
@@ -98,7 +100,8 @@ the shell will hand over to another shell to run the commands.
 Here is what the same program might look like if written for Python and save
 in `hello.py`.
 
-```#!/usr/bin/python
+```
+#!/usr/bin/python
 print("Hello, there.")
 print("I just printed something for you.")
 ```
@@ -107,7 +110,8 @@ print("I just printed something for you.")
 If the execute permission is unset, those two scripts could still be run,
 but you would need to provide the program name yourself.
 
-```$ bash hello.sh
+```
+$ bash hello.sh
 $ python hello.py
 ```
 
@@ -129,7 +133,8 @@ permission set on a directory without also having the execute permission, so
 if you see the second example below, you should remove the read permission
 or add the execute permission.
 
-```drwxr-sr-x 2 grundoon psych808 4096 Jan 10 22:21 bin
+```
+drwxr-sr-x 2 grundoon psych808 4096 Jan 10 22:21 bin
 drwxr-Sr-x 2 grundoon psych808 4096 Jan 10 22:21 bin
 ```
 
@@ -144,7 +149,8 @@ of anything'. You can restrict the characters that it will match none or
 more of by putting the characters inside square brackets before the `*`. For
 example,
 
-```$ ls -d sub0[01]*
+```
+$ ls -d sub0[01]*
 ```
 
 
@@ -170,7 +176,8 @@ Typically used without options.
 
 _Example_
 
-```$ pwd
+```
+$ pwd
 ```
 
 
@@ -195,7 +202,8 @@ completely different.
 
 _Examples_
 
-```$ ls
+```
+$ ls
 $ ls -l
 $ ls -d /tmp
 $ ls -d /tmp/*
@@ -233,7 +241,8 @@ last most recent directory; that is, where you were prior to the most recent
 
 _Examples_
 
-```$ cd /tmp/test
+```
+$ cd /tmp/test
 $ cd ..
 $ cd -
 $ cd
@@ -251,7 +260,8 @@ the current directory; i.e., `rmdir -p some/path` and never `rmdir -p
 
 _Examples_
 
-```$ rmdir /tmp/test/test2
+```
+$ rmdir /tmp/test/test2
 $ cd /tmp
 $ rmdir -p /tmp/test2/subtest
 ```
@@ -273,7 +283,8 @@ directory (or file) name.
 
 _Examples_
 
-```$ rm  tmp.0xkT43
+```
+$ rm  tmp.0xkT43
 $ rm -rv subject02000
 $ rm -ri DTI/sub001.bad
 ```
@@ -288,7 +299,8 @@ those targets in this section. The permissions (or modes) that you will most
 likely want to use are those for read (r), write (w), and execute (x or X).
 Let's look at an example of a file with some typical default permissions.
 
-```$ ls -l text_example
+```
+$ ls -l text_example
 -rwxr-xr-- 1 grundoon psych808 35 Jan 13 13:52 example_script
 ```
 
@@ -304,7 +316,8 @@ psych808.
 
 The chmod command takes the following general form
 
-```$ chmod &lt;options&gt; &lt;targets&gt;{+|-}&lt;permissions&gt;
+```
+$ chmod &lt;options&gt; &lt;targets&gt;{+|-}&lt;permissions&gt;
 ```
 
 
@@ -337,7 +350,8 @@ _Common options_
 
 _Examples_
 
-```$ chmod g+w example_script
+```
+$ chmod g+w example_script
 $ ls -l example_script
 -rwxrwxr-- 1 grundoon psych808 35 Jan 13 13:52 example_script
 
@@ -365,7 +379,8 @@ and paste.
 
 _Examples_
 
-```$ cat .bashrc
+```
+$ cat .bashrc
 $ cat README INSTALL
 ```
 
@@ -396,7 +411,8 @@ There's a lot of that kind of judgement in Linux-land.
 
 _Example_
 
-```$ rm Last_Checked ; touch Last_Checked```
+```
+$ rm Last_Checked ; touch Last_Checked```
 
 
 ### `cp`: Copy a file or files
@@ -417,7 +433,8 @@ when looking at directory listings.
 
 _Examples_
 
-```$ cp dissertation.txt dissertation.txt.bak
+```
+$ cp dissertation.txt dissertation.txt.bak
 $ cp ~/file.txt /tmp/test.txt
 $ cp -r openfmri /tmp/openfMRI
 $ cp -rp data/subject001/raw data/raw/subject001
@@ -441,7 +458,8 @@ one exists in the new location.
 
 _Examples_
 
-```$ mv tset.txt test.txt
+```
+$ mv tset.txt test.txt
 $ mv data_dir study_dir
 $ mv -i data_dir/anat study_dir/anat
 $ mv -n data_dir/func study_dir/func
