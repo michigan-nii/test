@@ -16,16 +16,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
+        <h1 class="header"><small>{{ site.title | default: site.github.repository_name }}</small></h1>
         <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
-
-        <ul>
-          <li>Bash</li>
-          <li>Make</li>
-          <li>FSL</li>
-          <li>FreeSurfer</li>
-          <li>AFNI</li>
-        </ul>
 
         {% if site.github.is_project_page %}
           <p class="header">This project is maintained by <a class="header name" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
@@ -40,11 +32,21 @@
 
       <section>
         {{ content }}
+
+        <ul>
+          <li>Bash</li>
+          <li>Make</li>
+          <li>FSL</li>
+          <li>FreeSurfer</li>
+          <li>AFNI</li>
+        </ul>
+
       </section>
 
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
+
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     {% if site.google_analytics %}
