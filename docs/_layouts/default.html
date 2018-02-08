@@ -16,7 +16,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header"><font size="-1">{{ site.title | default: site.github.repository_name }}</font></h1>
+        <h1 class="header"><font size="+1">{{ site.title | default: site.github.repository_name }}</font></h1>
         <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
 
         <ul>
@@ -32,6 +32,8 @@
             <a class="header name" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
 
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+
       </header>
 
       <section>
@@ -39,7 +41,6 @@
       </section>
 
       <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
 
     </div>
