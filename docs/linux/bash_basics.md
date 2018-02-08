@@ -1,4 +1,4 @@
-# Basic Linux proficiency
+# Basic Bash Proficiency
 
 Fundamental to working with Linux is to understand files on Linux.  How
 they are named, what their properties are, how to change their properties,
