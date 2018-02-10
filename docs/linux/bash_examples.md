@@ -12,7 +12,8 @@ and unpack it.
 #!/bin/bash
 
 # Data URL; extract just the file name
-data_source='https://s3.amazonaws.com/openneuro/ds000008/ds000008_R2.0.0/compressed/ds008_R2.0.0_raw.tgz'
+data_source='https://s3.amazonaws.com/openneuro'
+data_source="$data_source/ds000008/ds000008_R2.0.0/compressed/ds008_R2.0.0_raw.tgz"
 data_file=$(basename $data_source)
 
 # Create a temporary directory into which to put our download; change there
