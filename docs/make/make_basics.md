@@ -8,7 +8,7 @@ neuroimaging.
 Here is a simple `Makefile` to do brain extraction using the `bet` command
 from FSL.
 
-```
+```make
 .PHONY: all clean
 
 all: bold.nii.gz
