@@ -6,7 +6,7 @@ neuroimaging.
 ## Examples
 
 `Makefile`
-----
+<hr>
 ```
 .PHONY: all clean
 
