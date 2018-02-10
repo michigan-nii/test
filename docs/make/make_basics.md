@@ -5,8 +5,8 @@ neuroimaging.
 
 ## Examples
 
-`Makefile`
-<hr noshade>
+Here is a simple `Makefile` to do brain extraction using the `bet` command
+from FSL.
 
 ```
 .PHONY: all clean
@@ -19,5 +19,3 @@ bold_brain.nii.gz: bold.nii.gz
 clean:
     rm -f bold_brain.nii.gz bold_brain_mask.nii.gz
 ```
-
-<hr noshade>
