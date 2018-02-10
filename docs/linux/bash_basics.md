@@ -443,7 +443,8 @@ There's a lot of that kind of judgement in Linux-land.
 _Example_
 
 ```
-$ rm Last_Checked ; touch Last_Checked```
+$ rm Last_Checked ; touch Last_Checked
+```
 
 
 ### `cp`: Copy a file or files
