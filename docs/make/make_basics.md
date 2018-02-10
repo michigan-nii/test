@@ -6,7 +6,7 @@ neuroimaging.
 ## Examples
 
 `Makefile`
-<hr>
+<hr noshade>
 ```
 .PHONY: all clean
 
@@ -18,3 +18,4 @@ bold_brain.nii.gz: bold.nii.gz
 clean:
     rm -f bold_brain.nii.gz bold_brain_mask.nii.gz
 ```
+<hr noshade>
