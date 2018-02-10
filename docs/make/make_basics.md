@@ -14,8 +14,8 @@ from FSL.
 all: bold.nii.gz
 
 bold_brain.nii.gz: bold.nii.gz
-    bet bold bold_brain -m -R
+		bet bold bold_brain -m -R
 
 clean:
-    rm -f bold_brain.nii.gz bold_brain_mask.nii.gz
+		rm -f bold_brain.nii.gz bold_brain_mask.nii.gz
 ```
