@@ -8,7 +8,7 @@ do with shell scripts.
 Our first example will simply get some data from a public data source
 and unpack it.
 
-```
+```bash
 #!/bin/bash
 
 # Data URL; extract just the file name
