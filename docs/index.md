@@ -1,4 +1,4 @@
-# Linux for Neuroimagers
+# Creating a basic neuroimaging pipeline
 
 This page is meant to help you get started with using Linux, but
 particularly the Linux command line. The command line is a program,
