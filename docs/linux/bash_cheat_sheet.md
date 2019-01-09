@@ -135,9 +135,10 @@ three characters, `rw-` indicate that the owner of the file, a user named
 an executable (runnable) program.  The second set is the same as the first
 `rw-` but applies to the group, in this case `users`.  The final set is
 `r--`, which applies to all others not an owner or in the group, and means
-they can only read, and cannot write or execute.  The final `.` characters
-means that the may be additional permissions imposed by an _access control
-list_, and those may change what you see in the directory listing.
+they can only read, and cannot write or execute.  The final `.` character
+means that there may be additional permissions imposed by an
+invisible _access control list_, and those may change what you see in
+the directory listing and your access.
 
 It's worth making special note of the `x` permission on files.  Even if a
 file contains the binary data needed to be run by the computer, if the `x`
@@ -306,9 +307,11 @@ $ cp -rp data/subject001/raw data/raw/subject001
 
 #### `mv`: Move a file or files to another location or name
 
-On Linux, renaming a file on the same file system may be the same as renaming
-a file, so the simplest `mv` just renames a file.  `mv` is also used to
-move files from one directory to another.  It can be used to move whole
+On Linux, renaming a file on the same file system (e.g., in the same directory)
+is the same as moving it from one name to another name, so the simplest `mv`
+just renames a file.  That is, the `mv` command is smart enough to know it
+doesn't have to do anything with the contents, just the name.  The`mv` is also
+used to move files from one directory to another.  It can be used to move whole
 directories to a new location as well.  If the target exists, `mv` will
 happily overwrite it.
 
