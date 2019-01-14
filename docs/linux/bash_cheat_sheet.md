@@ -5,25 +5,33 @@
 
 You can name files and directories almost anything on a Linux machine,
 however, we recommend that you limit yourself to using a restricted
-set of characters, and that you establish some conventions.  The
-recommended set of characters is
+set of characters, and that you establish some a naming scheme and
+stick to it.  The recommended convention is to only use this subset
+of possible characters in filenames.
 
 + letters, both upper- and lowercase
 + numerals
 + the dash (`-`), the underscore (`_`), and the dot (.)
 
+Never, ever, ever put spaces in your file names.  If you find someone who
+puts spaces in their file names, make them stop!
+
+Other characters _can_ be used, but may have special significance to some
+programs and are therefore ___should not be used___.
+
 Note that a dot as the _first_ character will make a file or directory
-hidden from listing commands and wildcards.  Many _dot files_ are for
+hidden from listing commands and wildcards.  Many _dot files_, which is
+what files with names beginning with a dot are called, are for
 configuration options or program data.
+
+Never, ever, ever put spaces in your file names.  If you find someone who
+puts spaces in their file names, make them stop or work somewhere else.
 
 There are also two special directories, called dot (`.`) and dot-dot (`..`).
 The dot directory is the directory that you are currently working from
 (or are 'in').  The dot-dot directory is the one above the current
 directory, or, if you're looking at its name, it's everything to the
 left of the first `/` character as you move to the left from the right.
-
-Other characters can be used, but may have special significance to some
-programs and are therefore not recommended.
 
 Some people will begin directory names with an upper-case letter, to make
 them easily distinguishable in list of directory contents.
@@ -79,16 +87,14 @@ $ cd
 ```
 
 #### `rmdir`: Used to remove empty directories
-
-`-p` will remove parent directories if they contain only the path to the directory
-being removed.  Recommended that you use this _only_ relative to the current
-directory; i.e., `rmdir -p some/path` and never `rmdir -p /some/absolute/path`.
+Typically used without options.  If the directory is not empty, `rmdir`
+will not remove it and will tell you it is not empty; this is a safe
+and friendly command.
 
 _Examples_
 ```
+$ rmdir work
 $ rmdir /tmp/test/test2
-$ cd /tmp
-$ rmdir -p /tmp/test2/subtest
 ```
 
 #### `rm`: Used to remove a file or folder (usually non-empty)
@@ -192,6 +198,7 @@ command below for more information.
 #### `ls`: List the contents of a directory
 
 _Common options_
+
 `-d` will list only the directory name and not the contents.
 
 `-l` will make a long listing that shows permissions, owner and group, and
