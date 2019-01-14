@@ -197,6 +197,11 @@ command below for more information.
 
 #### `ls`: List the contents of a directory
 
+This will be one of the most commonly used commands.  You may find that
+the date and time of last modification is a very handy thing to know.  It
+frequently comes up when you have two files, typically scripts, that both
+seem to do the same thing, and you want to know which came before which.
+
 _Common options_
 
 `-d` will list only the directory name and not the contents.
@@ -229,10 +234,51 @@ $ ls -R /tmp
 
 #### `chmod`: Change the mode (permissions) of a file or directory
 
+You can set the mode (permission) of a file using either a symbolic or a
+numeric permission.  I recommend that you use the symbolic, i.e., letters,
+and not the numbers.  The numbers will completely replace all permissions,
+whereas the letters will change only those permissions you say.  For that
+reason, only the symbolic permissions are given here.
+
+To specify which set of permissions you want to modify, you will use one of
+`u` (user), `g` (group), or `o` (other).  The most common permissions you
+will want to change are `r` (read), `w` (write), and `x` (execute).  Remember
+that a directory almost always needs to have _both_ `r` and `x` set to do
+what you would think.  Without the `x`, using `cd` will generate an error.
+That is almost always not what you want.
+
 _Common options_
+
+`-R` makes the change of mode (permission) recursive; that is to everything
+at and under the target.
 
 _Examples_
 
+To add read (in the loose, generic sense) permission for others to a directory
+called `Public`, you would use
+
+```
+$ chmod o+rx Public
+```
+whereas if you had a file call `public-information`, you would use
+
+```
+$ chmod o+r public-information
+```
+
+You can make different changes to more than one set of permissions at once by
+separating with a comma, as in the following that removes access to the
+SemiPrivate directory from others and grants it to the group
+
+```
+$ chmod g+rx-w,o-rwx SemiPrivate
+```
+
+and you can combine the same permissions to different groups
+
+```
+$ chmod go+rx-w Public
+```
 
 #### `cat`: Print the contents of a file or files
 This will print the contents, no matter what they are (might be binary
@@ -248,13 +294,14 @@ $ cat README INSTALL
 
 #### `less`: Used to 'page' through a file one screen at a time.
 
-Once a file is displayed by `less`, you can search for text by pressing the `/` key,
-then entering the text to search.  Found matches will be highlighted.  You can
-use `n` to go to the next match and `N` (Shift-N) to move to the previous match.
-The `f` (or the spacebar, or possibly the page-down key) will move you forward one
-screenfull; `b` (will move you back one screenfull; Return or the down-arrow will
-move you one line forward.  To quit, use `q`.  This is a totally most-excellent
-program to use to get used to reading `man` pages.
+Once a file is displayed by `less`, you can search for text by pressing
+the `/` key, then entering the text to search.  Found matches will be
+highlighted.  You can use `n` to go to the next match and `N` (Shift-N)
+to move to the previous match.  The `f` (or the spacebar, or possibly
+the page-down key) will move you forward one screenfull; `b` (will move
+you back one screenfull; Return or the down-arrow will move you one line
+forward.  To quit, use `q`.  This is a totally most-excellent program to
+use to get used to reading `man` pages.
 
 #### `touch`: Update the last modified time; create an empty file.
 
